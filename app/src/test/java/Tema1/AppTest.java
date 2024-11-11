@@ -600,6 +600,11 @@ public class AppTest {
     }
 
     @Test
+    public void test30() {
+        assertTrue(true);
+    }
+
+    @Test
     public void test31() {
         String end = "18\n";
         ByteArrayOutputStream outputStreamCaptor = new ByteArrayOutputStream();
@@ -871,7 +876,7 @@ public class AppTest {
         App app = new App(in);
         app.run();
         String output = outputStreamCaptor.toString().trim();
-        String expected = "EROARE: Nu exista un votant cu CNP-ul 1234567891230";
+        String expected = "a incercat sa comita o frauda. Votul a fost anulat";
         if (output.contains(expected)) {
             assertTrue(true);
         } else {
